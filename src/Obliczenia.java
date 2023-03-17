@@ -1,3 +1,5 @@
+import java.util.stream.Stream;
+
 public class Obliczenia {
 
     public static int dodaj(int a, int b) {
@@ -16,29 +18,28 @@ public class Obliczenia {
         }
     }
 
-        public static int sortowaniep (int d, int e, int f, int porownanie){
-            if (d > e) {
-                porownanie = d;
-            }
-            else{
-                    porownanie = e;
-                }
-            if (porownanie > e) {
-                porownanie = porownanie;
-            }
-                else{
-                    porownanie = e;
-                }
-            if (porownanie > f) {
-                porownanie = porownanie;
-            }
-                else{
-                    porownanie = f;
-                }
-                return porownanie;
-            }
-
-
+    public static int sortowaniep(int d, int e, int f, int porownanie) {
+        if (d > e) {
+            porownanie = d;
+        } else {
+            porownanie = e;
         }
+        if (porownanie > e) {
 
+        } else {
+            porownanie = e;
+        }
+        if (porownanie > f) {
+
+        } else {
+            porownanie = f;
+        }
+        return porownanie;
+    }
+
+    public static int sortprosty(int a, int b, int c, int naj) {
+       naj = Stream.of(a,b,c).max(Integer::compareTo).get();
+        return naj ;
+    }
+}
 
